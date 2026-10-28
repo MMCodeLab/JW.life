@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#050d1f">
+<link rel="icon" type="image/png" href="assets/favicon-48.png">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<title>JW.life</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="splash"><div class="logo"><img src="assets/logo-spiritual.png" alt="" onerror="this.style.display='none'"></div><h1>JW.life</h1></div>
+<main>
+  <header><img src="assets/logo-spiritual.png" alt="" onerror="this.style.display='none'"><h2>JW.life</h2></header>
+
+  <section id="v-goals">
+    <div class="card">
+      <input id="gt" placeholder="Nuovo obiettivo spirituale…">
+      <select id="gp">
+        <option value="7">Settimanale</option>
+        <option value="30" selected>Mensile</option>
+        <option value="365">Annuale</option>
+        <option value="0">A tempo indeterminato</option>
+      </select>
+      <button class="pri" id="ga">Aggiungi obiettivo</button>
+    </div>
+    <div id="goals"></div>
+  </section>
+
+  <section id="v-verses" hidden>
+    <div class="card">
+      <input id="vr" placeholder="Riferimento (es. 1 Giovanni 4:8)">
+      <textarea id="vx" placeholder="Testo del versetto"></textarea>
+      <textarea id="vn" placeholder="Le tue note"></textarea>
+      <input id="vg" list="groups" placeholder="Gruppo (es. Amore, Fiducia…)">
+      <datalist id="groups"></datalist>
+      <button class="pri" id="va">Salva versetto</button>
+    </div>
+    <div class="row" id="chips" style="margin-bottom:12px"></div>
+    <div id="verses"></div>
+  </section>
+
+  <section id="v-meet" hidden>
+    <div id="banner"></div>
+    <div class="card">
+      <input id="mt" placeholder="La tua parte (es. Lettura biblica)">
+      <div class="row"><input id="md" type="date" style="flex:1"><input id="mh" type="time" style="flex:1"></div>
+      <select id="mr">
+        <option value="1" selected>Ricordamelo il giorno prima</option>
+        <option value="0">Ricordamelo il giorno stesso</option>
+        <option value="3">Ricordamelo 3 giorni prima</option>
+        <option value="-1">Nessun promemoria</option>
+      </select>
+      <button class="pri" id="ma">Aggiungi parte</button>
+      <button id="mn" style="width:100%;margin-top:8px">🔔 Attiva notifiche</button>
+    </div>
+    <div id="meets"></div>
+  </section>
+
+  <section id="v-bible" hidden>
+    <div id="bible"></div>
+  </section>
+</main>
+<nav><button class="on" data-v="goals">Obiettivi</button><button data-v="verses">Versetti</button><button data-v="meet">Adunanze</button><button data-v="bible">Bibbia</button></nav>
+<script src="js/app.js"></script>
+</body>
+</html>
